@@ -1,4 +1,4 @@
--- CREATE DATABASE cinema CHARACTER SET 'utf8';
+-- CREATE DATABASE simplon-blog CHARACTER SET 'utf8';
 set foreign_key_checks=0;
 
 CREATE TABLE `User` (
