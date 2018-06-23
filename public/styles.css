@@ -1,28 +1,57 @@
 #titre {
     font-size: 30px;
-    font-family: 'Cabin Sketch', cursive;
-    color: #28A745;
+    color: #216082;
 }
 
-.fas  {
-    color: #28A745;
+.logo {
+    width: 100px;
+    height: 80px;
+    margin-top: -20px;
+}
+
+.btn {
+    background-color: #216082;
+    color: white;
+}
+
+#card1 {
+    height: 400px;
 }
 
 .card {
     margin: 0 auto;
-    margin-top: 50px;
 }
 
 .card-title {
     text-align: center;
+    font-weight: bold;
 }
 
-.card-link {
-    margin-left: 80%;
+.card-title {
+    color: #216082;
+}
+
+.card-text {
+    color: #7B7B7B;
+}
+
+.postText {
+    height: 270px;
+    overflow: hidden;
 }
 
 .italic {
-    color: #28A745;
+    color: #216082;
     font-style: italic;
     font-size: 15px;
+}
+
+.page-item {
+    margin: 4%;
+}
+
+.foot {
+    color: white;
+    text-align: center;
+    background-color: #216082;
 }
