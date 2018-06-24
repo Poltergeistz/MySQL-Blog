@@ -18,7 +18,8 @@ var Post = {
     idUser: "" // FK from User Table
 };
 // Show elements inserted into db
-var query = db.query('Inserted into database : ?', Post, function(err, result){
+// var query = 
+db.query('Inserted into database : ?', Post, function(err, result){ // ? est un placeholder dans mysql. Il prendra les valeurs de Post.
     // Error log
     if(err){
         console.error(err);
