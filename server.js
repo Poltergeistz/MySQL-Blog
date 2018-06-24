@@ -194,7 +194,7 @@ app.get('/delete/:id', function (req, res) {
 
 // Listen
 app.listen(8080, function (req, res) {
-    console.log('Server Online')
+    console.log('Server Online on 8080')
 })
 
 const MongoClient = require('mongodb').MongoClient;
