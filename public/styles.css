@@ -14,6 +14,11 @@
     color: white;
 }
 
+.btn:hover {
+    color: #216082;
+    background-color: #728B99;
+}
+
 #card1 {
     height: 400px;
 }
