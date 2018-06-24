@@ -133,6 +133,44 @@ app.post('/search', function (req, res) {
     );
 })
 // Add Post
+//newpost page, for typing a new post
+app.get('/newpost', function (req, res) {
+    res.render('newpost');
+})
+// addpost insert the post in database, when we click on newpost submit 
+app.post('/addpost/', function (req, res) {
+    //genere la date actuelle au format UTC
+    let d = new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '');
+    //cree l'objet postUser avecle contenu des inputs de newpost
+    let postUser = {
+        title: req.body.title,
+        post: req.body.content,
+        author: req.body.author,
+        date: d
+    };
+    //se connecte a la database
+    MongoClient.connect(
+        url,
+        function (err, client) {
+            if (err) {
+                console.log(err);
+                db.close();
+            }
+            let db = client.db(dbName);
+            let posts = db.collection('posts');
+            //insert le nouveau post dans la database
+            db.collection("posts").insert(postUser, null, function (error, results) {
+                if (error) {
+                    throw error;
+                } else {
+                    console.log("Le document a bien été inséré");
+                    client.close();
+                    res.redirect('/');
+                }
+            });
+        }
+    );
+});
 
 // Update Post
 
