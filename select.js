@@ -1,13 +1,8 @@
 var mysql = require('mysql');
+var config = require('./config'); // Exporting credentials from config.js
 
 // Create a connection into the database
-var db = mysql.createConnection({
-    host    : "sql7.freemysqlhosting.net",
-    port    : "3306",
-    user    : "sql7244055",
-    password: "Ee5FBQbYYB",
-    database: "sql7244055"
-});
+var db = mysql.createConnection(config);
 db.connect();
 
 // Retrive elements from database
