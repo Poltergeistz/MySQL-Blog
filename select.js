@@ -11,3 +11,10 @@ var db = mysql.createConnection({
 db.connect();
 
 // Retrive elements from database
+var query = db.query('select * from sql7244055', function(err, result){
+    if(err){
+        console.error(err);
+        return;
+    }
+    console.log(result);
+});
