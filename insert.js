@@ -11,9 +11,11 @@ var db = mysql.createConnection({
 db.connect();
 
 // Insert data into database
-
 var Post = {
-
+    post_title: "Some title",
+    post_content: "exemple text for exemple",
+    post_date: "24/06/2018",
+    idUser: "" // FK from User Table
 };
 // Show elements inserted into db
 var query = db.query('Inserted into database : ?', Post, function(err, result){
